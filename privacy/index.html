@@ -17,185 +17,82 @@
   </style>
 </head>
 <body>
-
+<nav><a href="#privacy-en">English</a> · <a href="#privacy-zh">简体中文</a></nav>
+<main>
+<section id="privacy-en" lang="en">
 <h1>Compris Privacy Policy</h1>
-<p class="meta">Effective date: September 13, 2026</p>
-
-<p>Compris is an AI-assisted French reading, translation and dictionary app for Android
-("the App"), provided by the developer identified in the <a href="#contact">Contact</a>
-section below ("we", "us").</p>
-
-<p><strong>Short version: we do not collect, receive, or store any of your data on any
-server.</strong> The App has no developer-operated backend, no account system, no
-analytics, and no advertising. Everything you do in the App stays on your device, except
-the AI requests described in Section 3, which are sent directly from your device to the
-AI provider <em>you</em> choose and configure.</p>
-
-<h2>1. Data stored on your device</h2>
-<p>The following data is stored locally on your device only, and is never transmitted to us:</p>
-<ul>
-  <li><strong>AI provider settings and API keys.</strong> API keys you enter for your AI
-      providers are stored in the Android platform secure storage (Android Keystore).
-      They are never sent to us, never written to logs or history records.</li>
-  <li><strong>Understanding history.</strong> Your reading history and AI-generated
-      explanations are stored in a local database on the device.</li>
-  <li><strong>Preferences and settings.</strong> Interface language, explanation language,
-      and other settings.</li>
-</ul>
-
-<h2>2. Data we do not collect</h2>
-<ul>
-  <li>No account or registration — the App works entirely without one.</li>
-  <li>No analytics, telemetry, or crash-reporting SDKs.</li>
-  <li>No advertising or ad identifiers.</li>
-  <li>No tracking, profiling, or device fingerprints.</li>
-  <li>We never receive copies of your reading texts, history, or API keys.</li>
-</ul>
-
-<h2>3. Data sent to third-party AI providers</h2>
-<p>When you use the understanding features, the App sends requests over HTTPS
-<strong>directly from your device</strong> to the AI service endpoint that you have
-configured yourself (for example OpenAI, Anthropic, Google Gemini, DeepSeek, or your own
-self-hosted server). These requests typically contain:</p>
-<ul>
-  <li>the French text you selected, plus limited surrounding context needed to interpret it;</li>
-  <li>your question or chosen understanding mode;</li>
-  <li>technical instructions needed to obtain a structured answer.</li>
-</ul>
-<p>Because the requests go directly to the provider you chose:</p>
-<ul>
-  <li>we cannot see, intercept, or store them — we operate no server involved in this
-      communication;</li>
-  <li>how the provider handles that data is governed by <em>that provider's</em> own
-      privacy policy and terms, which you should review;</li>
-  <li>if you configure a provider endpoint of your own, the data goes only where you
-      point it.</li>
-</ul>
-
-<h2>4. Backup and export files</h2>
-<p>The App lets you manually export a backup file (for example to migrate to a new
-device) and import it back. Backup files are written only to locations you choose, and
-are entirely under your control — we never receive them. Optionally, and only after an
-explicit in-app risk warning, you may include your API keys in a backup file. Backup
-files that contain API keys are sensitive: keep them safe and delete them when no longer
-needed.</p>
-
-<h2>5. Permissions the App uses</h2>
-<ul>
-  <li><strong>Internet</strong> — to send your AI requests to the provider you configured.</li>
-  <li><strong>File selection</strong> — used only when you explicitly import or export a
-      backup file, via the Android file picker.</li>
-</ul>
-
-<h2>6. Data retention and deletion</h2>
-<ul>
-  <li>All local data (history, settings, stored API keys) is deleted when you uninstall
-      the App.</li>
-  <li>You can delete history entries or stored API keys at any time from within the App.</li>
-  <li>Backup files you exported remain where you saved them and are under your control.</li>
-</ul>
-
-<h2>7. Children's privacy</h2>
-<p>The App is not directed at children under 13, and we do not knowingly collect any
-personal information from anyone, including children.</p>
-
-<h2>8. Security</h2>
-<p>The App uses HTTPS for all network communication and the Android platform secure
-storage (Android Keystore) for API keys. No method of transmission or storage is
-absolutely secure, but because your data never passes through servers operated by us,
-the most common centralized-breach risks do not apply.</p>
-
-<h2>9. Changes to this policy</h2>
-<p>If we change this policy, we will post the updated version on this page with a new
-effective date. Material changes will also be reflected in the App's release notes.</p>
-
-<h2 id="contact">10. Contact</h2>
-<p>If you have questions about this policy, contact us at:
-<a href="mailto:greenbean.ai.app@gmail.com">greenbean.ai.app@gmail.com</a></p>
-
-<hr>
-
-<div class="zh" lang="zh-CN">
+<p>Updated: September 14, 2026</p>
+<h2>Who provides Compris</h2>
+<p>Compris is provided by <strong>Green Bean Man</strong>. Contact: <strong>greenbean.ai.app@gmail.com</strong>. This policy covers the Android app and explains the separate role of the public website at <a href="https://kant-righteous.github.io/compris-site/privacy/">https://kant-righteous.github.io/compris-site/privacy/</a>.</p>
+<p>Compris helps with vocabulary, reading, expression and language explanations using AI. Its current interface, explanation and learning-language choices include Simplified Chinese, English, French, Spanish and Italian. Available results depend on the model and language configuration; they may be inaccurate.</p>
+<h2>Local data and developer services</h2>
+<p>The current app has no Compris account, developer-operated AI relay, advertising SDK, analytics SDK or automatic crash-report upload. This does not mean that no data leaves the device: AI requests go to your configured provider, and files or support messages you choose to send may reach other services.</p>
+<p>The app stores understanding history (including original input and generated results), preferences, language choices, provider settings, model discovery/capability information and diagnostic records in its local application storage. History and settings use an ordinary local database, not a separately encrypted database. Android&#x27;s app isolation and device security also affect protection.</p>
+<p>API keys entered in the dedicated key field use platform secure storage through flutter_secure_storage, with encryption keys protected by Android Keystore. The API key itself is an authentication credential sent to the configured endpoint. It is not added to understanding history or diagnostic payloads by the app. Text or custom request parameters you enter elsewhere can themselves contain secrets; those fields do not receive the dedicated API-key protection.</p>
+<h2>When data leaves the device</h2>
+<p>When you request an understanding, a follow-up, additional expressions, a retry or a real AI test, the app sends data directly to the AI endpoint you configure. Requests may include the original input, questions, selected passages, the current understanding result, existing generated candidates, language/learning preferences and system instructions. A follow-up can include the full current result, not just the highlighted words. Parsing repairs can send the original input, a previous response and validation feedback. The app does not automatically upload the entire history library.</p>
+<p>Before new generated content is displayed, a further safety check sends the source context and proposed answer to the same configured provider and model. This can increase provider charges and latency. Failed or unsuccessful checks prevent that new answer from being displayed. These measures can make mistakes and do not guarantee safe or correct content. Old history and imported content are not retrospectively checked.</p>
+<p>Connection checks and model discovery send your API key and technical requests; capability tests send fixed test content. Provider requests include a model identifier and may include advanced request parameters you configured. The receiving service also sees connection metadata such as your IP address and request time, and may associate requests with its account or API project. Some providers derive an approximate region or country from an IP address; for example, OpenRouter describes passing the originating country to upstream models.</p>
+<p>AI endpoints must use HTTPS; the app does not automatically follow redirects for these requests. HTTPS protects the connection to the selected endpoint. It does not establish that a custom endpoint is trustworthy or control a provider&#x27;s onward processing.</p>
+<h2>Independent AI providers and custom endpoints</h2>
+<p>The app offers templates for OpenAI, DeepSeek, Gemini, OpenRouter, AgnesAI, Kimi, MiMo, GLM/Z.ai, Qwen and compatible custom endpoints. A template is a configuration convenience, not an endorsement or a guarantee of availability. This version uses an OpenAI-compatible protocol; a native Anthropic adapter is not supported.</p>
+<p>Providers, gateways and their upstream model services apply their own terms and privacy policies. Their retention periods, training use, abuse monitoring, human review, subprocessors, processing countries and deletion options vary by service, region, subscription and account settings. A gateway may forward content to another provider. Green Bean Man does not set those independent practices or promise zero retention, no training, EU-only processing or universal deletion on their behalf. Review the terms of the actual endpoint and account you use. Changing a display name or using a custom URL does not change the service&#x27;s terms.</p>
+<h2>Diagnostics</h2>
+<p>Diagnostics are local and are not automatically uploaded to Green Bean Man. Basic records include event/outcome, provider/model identifiers, endpoint host, error codes and timing. Optional detailed performance logging adds request/response sizes, token counts, output strategy, validation codes and performance measurements. The diagnostic export can also include app version and platform. Current diagnostic storage/export excludes response bodies, response previews, provider error summaries and response object keys. Provider/model names and hostnames may still identify your service configuration; inspect an export before sharing it.</p>
+<p>The app keeps at most 500 diagnostic records and prunes records older than seven days when logging or when diagnostics are initialized/read. This is not a background deletion timer. Upgrading removes legacy response preview/error-summary fields from active diagnostic database records. Previously exported logs and forensic remnants are not erased by that migration. You can clear diagnostics within the app.</p>
+<h2>Backup, import and export</h2>
+<p>Backup JSON files are not encrypted by Compris. You choose which history, settings and provider configurations to export and where to save the file. Dedicated API keys are excluded by default; including selected keys requires an explicit choice and risk acknowledgement. Advanced request parameters are ordinary provider configuration and can contain other secrets you entered. Review the full export contents, even when the API-key option is off.</p>
+<p>On Android, imports read the document you select into memory through the system document picker without making a new Compris disk-cache copy. Older app versions or your document provider may have cached copies. Android&#x27;s app cache controls can remove old app cache files. Importing a backup does not send it to an AI provider, but subsequent AI use of imported history can send the current context as described above.</p>
+<p>Exports remain at the destination you select. A cloud document provider may upload or synchronize them under its own policy. Compris does not operate an automatic backup/sync service and requests exclusion of its private app data from Android cloud backup and device transfer. Device vendors and external file providers control their own behavior.</p>
+<h2>Support communication</h2>
+<p>If you email greenbean.ai.app@gmail.com, Green Bean Man receives your email address, message, and any files or other details you include. This information is used to respond, investigate problems and handle privacy requests; the email service also processes it under its own terms. Do not send API keys or unneeded private text. Support correspondence may be retained for handling the issue, follow-up and applicable obligations. You may request deletion at that address; any applicable retention exceptions will be explained when handling your request. There is no automatic support-email deletion schedule implemented by the app.</p>
+<h2>Retention and deletion</h2>
+<p>Local history and settings remain until you delete them, replace them through an import where applicable, or clear the app&#x27;s data. You can delete individual history entries or all history, remove provider/API-key configurations, and clear diagnostics. Clearing local history does not delete local diagnostic metadata, external backups, email correspondence or copies held by AI providers. Removing a stored key does not revoke it at the provider; revoke exposed keys in that provider&#x27;s account.</p>
+<p>Android normally removes private app data when you clear app storage or uninstall. Exported files, document-provider caches, transfers made outside the app and third-party records may remain. Delete exported files separately and contact the relevant AI or file provider for its retention and deletion controls. There is no Compris online account to delete, and Green Bean Man cannot delete data held in your independent provider account through the app.</p>
+<h2>Age and responsible use</h2>
+<p>Compris is not designed for children under 13. AI use must also meet the actual provider&#x27;s age, country and account requirements and any applicable guardian-consent rules. Some services have stricter limits: Gemini API and OpenRouter have adult-use restrictions. A parent&#x27;s consent alone does not override a provider&#x27;s prohibition. The app currently does not verify age or collect a date of birth. Avoid entering personal information about children or others without appropriate authority.</p>
+<h2>Permissions, website and changes</h2>
+<p>The Android app uses Internet access for provider requests and the system document picker for files you select. It does not request contacts, microphone, camera or location permissions. Your keyboard, operating system and chosen document services have their own data practices.</p>
+<p>The in-app policy copy can be read offline. Opening the public website in a browser makes a separate connection to GitHub Pages; GitHub can process IP addresses and technical request information under its privacy statement: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement</a>. The website source does not include analytics or advertising scripts.</p>
+<p>Updated policies will appear at the public address above with an updated date; app releases include a bundled policy copy. For questions or requests about information received by Green Bean Man, contact greenbean.ai.app@gmail.com.</p>
+</section>
+<section id="privacy-zh" class="zh" lang="zh-Hans">
 <h1>Compris 隐私政策</h1>
-<p class="meta">生效日期：2026 年 9 月 13 日</p>
-
-<p>Compris 是一款 Android 平台上的 AI 辅助法语阅读、翻译与词典应用（下称"本应用"），
-由<a href="#contact-zh">联系方式</a>一节所列的开发者（下称"我们"）提供。</p>
-
-<p><strong>简要说明：我们不在任何服务器上收集、接收或存储你的任何数据。</strong>
-本应用没有开发者运营的后端，没有账号系统，没有统计分析，也没有广告。你在应用内的一切
-数据都只保留在你的设备上；唯一的例外是第 3 节所述的 AI 请求——它从你的设备直接发送给
-<em>你自己配置</em>的 AI 服务商。</p>
-
-<h2>一、存储在你设备上的数据</h2>
-<p>以下数据仅存储在你的设备本地，永远不会传输给我们：</p>
-<ul>
-  <li><strong>AI 服务商设置与 API 密钥。</strong>你填入的 API 密钥存储在 Android
-      平台安全存储（Android Keystore）中，不会发送给我们，也不会写入日志或历史记录。</li>
-  <li><strong>理解历史。</strong>你的阅读历史与 AI 生成的讲解保存在设备上的本地数据库中。</li>
-  <li><strong>偏好与设置。</strong>界面语言、讲解语言等设置项。</li>
-</ul>
-
-<h2>二、我们不收集的数据</h2>
-<ul>
-  <li>无账号、无注册——本应用完全不需要账号即可使用。</li>
-  <li>不集成任何统计、遥测或崩溃上报 SDK。</li>
-  <li>没有广告及广告标识符。</li>
-  <li>不做追踪、画像或设备指纹。</li>
-  <li>我们永远不会收到你的阅读文本、历史记录或 API 密钥的副本。</li>
-</ul>
-
-<h2>三、发送给第三方 AI 服务商的数据</h2>
-<p>当你使用理解功能时，本应用会通过 HTTPS 将请求<strong>从你的设备直接发送</strong>到
-你自己配置的 AI 服务端点（例如 OpenAI、Anthropic、Google Gemini、DeepSeek，或你自建的服务）。
-这些请求通常包含：</p>
-<ul>
-  <li>你选中的法语文本，以及理解它所需的少量上下文；</li>
-  <li>你的提问或所选的理解方式；</li>
-  <li>获得结构化回答所需的技术性指令。</li>
-</ul>
-<p>由于请求直达你所选择的服务商：</p>
-<ul>
-  <li>我们无法看到、拦截或存储这些请求——整个通信过程中不存在由我们运营的服务器；</li>
-  <li>服务商如何处理这些数据，由<em>该服务商自己的</em>隐私政策与条款决定，建议你查阅；</li>
-  <li>如果你配置的是自建服务端点，数据只会发送到你自己指定的地方。</li>
-</ul>
-
-<h2>四、备份与导出文件</h2>
-<p>本应用支持手动导出备份文件（例如迁移到新设备）并重新导入。备份文件只会写入你选择的
-位置，完全由你掌控——我们永远不会收到它。在应用内明确提示风险后，你可以选择将 API 密钥
-一并包含在备份文件中。包含 API 密钥的备份文件属于敏感文件：请妥善保管，不再需要时请删除。</p>
-
-<h2>五、本应用使用的权限</h2>
-<ul>
-  <li><strong>网络</strong>——用于向你所配置的 AI 服务商发送请求。</li>
-  <li><strong>文件选择</strong>——仅在你主动导入或导出备份文件时，通过 Android
-      文件选择器使用。</li>
-</ul>
-
-<h2>六、数据保留与删除</h2>
-<ul>
-  <li>卸载本应用即删除全部本地数据（历史、设置、已存 API 密钥）。</li>
-  <li>你可以随时在应用内删除历史记录或已存的 API 密钥。</li>
-  <li>你导出的备份文件保存在你存放的位置，由你掌控。</li>
-</ul>
-
-<h2>七、儿童隐私</h2>
-<p>本应用不面向 13 岁以下儿童，我们也不会有意收集任何人（包括儿童）的个人信息。</p>
-
-<h2>八、安全</h2>
-<p>本应用的所有网络通信均使用 HTTPS，API 密钥存储于 Android 平台安全存储
-（Android Keystore）。任何传输与存储方式都无法做到绝对安全，但由于你的数据从不经过
-我们运营的服务器，最常见的集中式数据泄露风险在这里并不存在。</p>
-
-<h2>九、政策变更</h2>
-<p>如果我们变更本政策，会在本页面发布更新版本并注明新的生效日期。重大变更也会在应用的
-版本说明中体现。</p>
-
-<h2 id="contact-zh">十、联系方式</h2>
-<p>如果你对本政策有疑问，请通过
-<a href="mailto:greenbean.ai.app@gmail.com">greenbean.ai.app@gmail.com</a> 联系我们。</p>
-</div>
-
+<p>更新日期：2026 年 9 月 14 日</p>
+<h2>提供者与产品</h2>
+<p>Compris 由 <strong>Green Bean Man</strong> 提供。联系邮箱：<strong>greenbean.ai.app@gmail.com</strong>。本政策适用于 Android 应用，并说明公开网站 <a href="https://kant-righteous.github.io/compris-site/privacy/">https://kant-righteous.github.io/compris-site/privacy/</a> 的独立数据处理。</p>
+<p>Compris 使用 AI 辅助词汇理解、阅读、表达与语言讲解。当前界面、讲解及学习语言选项包括简体中文、英语、法语、西班牙语和意大利语。具体结果取决于模型与语言配置，可能存在错误。</p>
+<h2>本地数据与开发者服务</h2>
+<p>当前应用没有 Compris 账号系统、开发者运营的 AI 中转服务、广告 SDK、分析 SDK 或自动崩溃报告上传。这不代表数据不会离开设备：AI 请求会发送给你配置的 provider，你主动发送的文件或支持邮件也可能到达其他服务。</p>
+<p>应用在本地应用存储中保存理解历史（含原始输入和生成结果）、偏好、语言选择、provider 设置、模型发现与能力信息以及诊断记录。历史与设置使用普通本地数据库，并非单独加密的数据库；Android 应用隔离和设备自身的安全状态也影响保护效果。</p>
+<p>专用 API key 输入框中的密钥通过 flutter_secure_storage 使用平台安全存储，其加密密钥由 Android Keystore 保护。API key 本身作为身份验证凭据发送给配置的 endpoint。应用不会把该字段自动加入理解历史或诊断正文。你在其他文本或自定义请求参数中输入的内容也可能含有密钥，这些字段不具备专用 API key 字段的存储保护。</p>
+<h2>数据何时离开设备</h2>
+<p>当你发起理解、追问、补充表达、重试或真实 AI 测试时，应用会从设备直接向你配置的 AI endpoint 发送请求。请求可能包括原始输入、问题、选中文字、当前理解结果、已有生成候选、语言与学习偏好以及系统指令。追问可能包含完整的当前结果，不仅是高亮词语。格式修复可能再次发送原始输入、先前响应和校验反馈。应用不会自动上传整个历史库。</p>
+<p>新生成内容在显示前还会进行安全检查，将来源上下文与拟显示答案发送给同一 provider 和模型，因此可能增加费用和等待时间。检查未通过或失败时，该新答案不会显示。这些措施可能误判，不能保证内容安全或正确。既有历史和导入内容不会被追溯检查。</p>
+<p>连接测试和模型发现会发送 API key 与技术请求；能力测试发送固定测试内容。provider 请求含模型标识，也可能包含你配置的高级请求参数。接收服务还会看到 IP 地址、请求时间等连接信息，并可能将请求关联到其账号或 API 项目。一些 provider 会根据 IP 地址推断大致地区或国家；例如，OpenRouter 说明其会向上游模型传递请求来源国家。</p>
+<p>AI endpoint 必须使用 HTTPS；应用不会自动跟随这些请求的重定向。HTTPS 保护设备与选定 endpoint 之间的连接，不能证明自定义 endpoint 值得信任，也不能控制 provider 的后续处理。</p>
+<h2>独立 AI provider 与自定义 endpoint</h2>
+<p>应用提供 OpenAI、DeepSeek、Gemini、OpenRouter、AgnesAI、Kimi、MiMo、GLM/Z.ai、Qwen 及兼容自定义 endpoint 的配置模板。模板只是配置便利，不代表背书或可用性保证。当前版本使用 OpenAI-compatible 协议，不支持原生 Anthropic 适配器。</p>
+<p>provider、网关及其上游模型服务有各自的条款和隐私政策。保留期限、训练用途、滥用监测、人工审核、分包商、处理国家与删除方式会因服务、地区、套餐和账号设置而异。网关可能将内容转交其他 provider。Green Bean Man 不决定这些独立行为，也不替它们承诺零保留、不训练、仅在欧盟处理或全面删除。请核查实际 endpoint 和账号适用的条款。修改显示名称或使用自定义 URL 不会改变服务条款。</p>
+<h2>诊断</h2>
+<p>诊断保存在本地，不会自动上传给 Green Bean Man。基本记录包含事件与结果、provider/模型标识、endpoint 主机名、错误代码和耗时。可选的详细性能日志增加请求/响应大小、token 数量、输出策略、校验代码和性能测量；诊断导出也可能包含应用版本和平台。当前诊断存储与导出排除响应正文、响应预览、provider 错误摘要及响应对象键名。provider/模型名称和主机名仍可能识别你的服务配置，分享前请检查导出文件。</p>
+<p>应用最多保留 500 条诊断记录，在写入日志或初始化、读取诊断时清理超过七天的记录；这不是后台定时删除。升级会移除当前诊断数据库记录中的旧响应预览和错误摘要字段，不能抹去此前导出的日志或取证残留。你可以在应用内清空诊断。</p>
+<h2>备份、导入与导出</h2>
+<p>Compris 不加密备份 JSON。你选择导出的历史、设置和 provider 配置，以及保存位置。专用 API key 默认不导出；导出选定密钥需要主动勾选并确认风险。高级请求参数属于普通 provider 配置，可能包含你输入的其他密钥。即使未勾选 API key，也应检查完整导出内容。</p>
+<p>Android 导入通过系统文档选择器将你选定的文档读入内存，不会新建 Compris 磁盘缓存副本。旧版应用或文档 provider 可能留下缓存；Android 的应用缓存管理可以清除旧应用缓存文件。导入本身不将备份发给 AI provider，但之后使用导入历史进行 AI 交互时，可能按上文说明发送当前上下文。</p>
+<p>导出文件保留在你选定的位置。云文档 provider 可能按其政策上传或同步。Compris 不运营自动备份/同步服务，并请求 Android 云备份和设备迁移排除私有应用数据。设备厂商及外部文件服务控制其自身行为。</p>
+<h2>支持通信</h2>
+<p>当你发送邮件至 greenbean.ai.app@gmail.com 时，Green Bean Man 会收到邮箱地址、邮件正文以及你附带的文件或其他信息。这些信息用于回复、排查问题和处理隐私请求，邮件服务也按其条款处理信息。请勿发送 API key 或不必要的私密文本。支持通信可能为问题处理、后续跟进和适用义务而保留。你可通过该邮箱申请删除；处理请求时会说明适用的保留例外。应用没有实施支持邮件自动删除时间表。</p>
+<h2>保留与删除</h2>
+<p>本地历史和设置保留至你删除、在适用的导入操作中替换或清除应用数据。你可以删除单条或全部历史、移除 provider/API key 配置，以及清空诊断。清除本地历史不会删除诊断元数据、外部备份、邮件通信或 AI provider 持有的副本。删除本地 API key 不会在 provider 处撤销密钥；泄露密钥应在该 provider 账号中撤销。</p>
+<p>Android 通常会在清除应用存储或卸载时删除私有应用数据。导出文件、文档 provider 缓存、应用以外产生的迁移副本及第三方记录仍可能保留。请单独删除导出文件，并向相应 AI 或文件 provider 查询保留与删除控制。Compris 没有需要删除的在线账号，Green Bean Man 无法通过应用删除你独立 provider 账号中的数据。</p>
+<h2>年龄与负责任使用</h2>
+<p>Compris 不面向 13 岁以下儿童。AI 使用还必须满足实际 provider 的年龄、国家和账号要求，以及适用的监护人同意规则。一些服务限制更严格，例如 Gemini API 和 OpenRouter 有成人使用限制。监护人同意本身不能覆盖 provider 的禁止性规定。当前应用不核验年龄，也不收集出生日期。未经适当授权，请勿输入儿童或其他人的个人信息。</p>
+<h2>权限、网站与政策更新</h2>
+<p>Android 应用使用网络权限连接 provider，并通过系统文档选择器处理你选定的文件，不请求通讯录、麦克风、相机或位置权限。键盘、操作系统及所选文档服务有各自的数据处理方式。</p>
+<p>应用内政策副本可离线阅读。在浏览器中访问公开网站会单独连接 GitHub Pages；GitHub 可能按其隐私声明处理 IP 地址和技术请求信息：<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement</a> 。网站源码未包含分析或广告脚本。</p>
+<p>政策更新会在上述公开地址显示新的日期；应用发行版随包提供政策副本。如对 Green Bean Man 收到的信息有疑问或请求，请联系 greenbean.ai.app@gmail.com。</p>
+</section>
+</main>
 </body>
 </html>
