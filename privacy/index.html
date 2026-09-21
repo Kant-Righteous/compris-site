@@ -55,7 +55,7 @@
 <h2>When data leaves the device</h2>
 <p>When you request an understanding, a follow-up, additional expressions, a retry or a real AI test, the app sends data directly to the AI endpoint you configure. Requests may include the original input, questions, selected passages, the current understanding result, previously generated candidates (including earlier batches), language/learning preferences and system instructions. A follow-up can include the full current result, not just the highlighted words. Parsing repairs can send the original input, a previous response and validation feedback. The app does not automatically upload the entire history library.</p>
 <p>Connection checks and model discovery send your API key and technical requests; capability tests send fixed test content. Provider requests include a model identifier and may include advanced request parameters you configured. The receiving service also sees connection metadata such as your IP address and request time, and may associate requests with its account or API project. Some providers derive an approximate region or country from an IP address; for example, OpenRouter describes passing the originating country to upstream models.</p>
-<p>AI endpoints must use HTTPS; apart from that requirement, these requests follow standard HTTP redirect behavior, which means an endpoint that responds with a redirect could forward the request, including its Authorization header, to another address. Only configure endpoints you trust. HTTPS protects the connection to the selected endpoint. It does not establish that a custom endpoint is trustworthy or control a provider's onward processing.</p>
+<p>AI endpoints must use HTTPS, and the app does not follow redirects for these requests: if an endpoint responds with a redirect, the request fails with an error instead, so your credentials are never replayed to another address. Only configure endpoints you trust. HTTPS protects the connection to the selected endpoint. It does not establish that a custom endpoint is trustworthy or control a provider's onward processing.</p>
 
 <h2>Independent AI providers and custom endpoints</h2>
 <p>The app offers templates for OpenAI, DeepSeek, Gemini, OpenRouter, AgnesAI, Kimi, MiMo, GLM/Z.ai, Qwen and compatible custom endpoints. A template is a configuration convenience, not an endorsement or a guarantee of availability. This version uses an OpenAI-compatible protocol; a native Anthropic adapter is not supported.</p>
@@ -132,7 +132,7 @@
 <h2>数据何时离开设备</h2>
 <p>当你发起理解、追问、补充表达、重试或真实 AI 测试时，应用会从设备直接向你配置的 AI endpoint 发送请求。请求可能包括原始输入、问题、选中文字、当前理解结果、此前生成的候选（含更早批次）、语言与学习偏好以及系统指令。追问可能包含完整的当前结果，不仅是高亮词语。格式修复可能再次发送原始输入、先前响应和校验反馈。应用不会自动上传整个历史库。</p>
 <p>连接测试和模型发现会发送 API key 与技术请求；能力测试发送固定测试内容。provider 请求含模型标识，也可能包含你配置的高级请求参数。接收服务还会看到 IP 地址、请求时间等连接信息，并可能将请求关联到其账号或 API 项目。一些 provider 会根据 IP 地址推断大致地区或国家；例如，OpenRouter 说明其会向上游模型传递请求来源国家。</p>
-<p>AI endpoint 必须使用 HTTPS；除该要求外，这些请求遵循标准 HTTP 重定向行为，即返回重定向的 endpoint 可能把请求（包括 Authorization 头）转发到其他地址。请只配置你信任的 endpoint。HTTPS 保护设备与选定 endpoint 之间的连接，不能证明自定义 endpoint 值得信任，也不能控制 provider 的后续处理。</p>
+<p>AI endpoint 必须使用 HTTPS，且应用不跟随这些请求的重定向：如果 endpoint 返回重定向，请求会直接失败报错，你的凭据不会被转发到其他地址。请只配置你信任的 endpoint。HTTPS 保护设备与选定 endpoint 之间的连接，不能证明自定义 endpoint 值得信任，也不能控制 provider 的后续处理。</p>
 
 <h2>独立 AI provider 与自定义 endpoint</h2>
 <p>应用提供 OpenAI、DeepSeek、Gemini、OpenRouter、AgnesAI、Kimi、MiMo、GLM/Z.ai、Qwen 及兼容自定义 endpoint 的配置模板。模板只是配置便利，不代表背书或可用性保证。当前版本使用 OpenAI-compatible 协议，不支持原生 Anthropic 适配器。</p>
