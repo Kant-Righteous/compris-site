@@ -22,7 +22,7 @@
 <main>
 <section id="privacy-en" lang="en">
 <h1>Compris Privacy Policy</h1>
-<p>Updated: September 21, 2026</p>
+<p>Updated: September 29, 2026</p>
 <h2>Who provides Compris</h2>
 <p>Compris is provided by <strong>Green Bean Man</strong>, established in France. Contact: <strong>greenbean.ai.app@gmail.com</strong>. This policy covers the Android app and explains the separate role of the public website at <a href="https://kant-righteous.github.io/compris-site/privacy/">https://kant-righteous.github.io/compris-site/privacy/</a>.</p>
 <p>Compris helps with vocabulary, reading, expression and language explanations using AI. Its current interface languages include Simplified Chinese, English, French, Spanish and Italian; its current learning (target) languages include French, Spanish, Italian, English and Simplified Chinese. Available results depend on the model and language configuration; they may be inaccurate.</p>
@@ -62,8 +62,8 @@
 <p>Providers, gateways and their upstream model services apply their own terms and privacy policies. Their retention periods, training use, abuse monitoring, human review, subprocessors, processing countries and deletion options vary by service, region, subscription and account settings. A gateway may forward content to another provider. Green Bean Man does not set those independent practices or promise zero retention, no training, EU-only processing or universal deletion on their behalf. Review the terms of the actual endpoint and account you use. Changing a display name or using a custom URL does not change the service's terms.</p>
 
 <h2>Diagnostics</h2>
-<p>Diagnostics are local and are not automatically uploaded to Green Bean Man. Basic records include event/outcome, provider/model identifiers, endpoint host, error codes and timing. Optional detailed performance logging adds request/response sizes, token counts, output strategy, validation codes and performance measurements. The diagnostic export can also include app version and platform. Full response bodies are never stored. In the default basic mode, storage and export also exclude response previews, provider error summaries and response object key names. If you enable the optional detailed logging, sanitized and truncated response previews, provider error summaries and response object key names are additionally recorded (API keys and key-like strings are redacted) and appear in exports. Provider/model names and hostnames may still identify your service configuration; inspect an export before sharing it.</p>
-<p>The app keeps at most 500 diagnostic records; records older than seven days are deleted when new records are written, and stale records are hidden from the diagnostics screen. This is not a background deletion timer. Upgrading removes legacy response preview/error-summary fields from active diagnostic database records. Previously exported logs and forensic remnants are not erased by that migration. You can clear diagnostics within the app.</p>
+<p>Diagnostics are local and are not automatically uploaded to Green Bean Man. Basic records include event/outcome, provider/model identifiers, endpoint host, error codes and timing, but do not save request content or response bodies. Optional detailed AI logging adds request/response sizes, token counts, output strategy, validation codes, performance measurements, provider error summaries, and response structure descriptions including response object key names. It also saves provider response bodies, including streamed responses, up to 256 KiB per response. These bodies may contain model reasoning, answers, personal information or input echoed by the provider. The configured API key and key-like strings are redacted; this does not anonymize other content. Oversized or interrupted responses are marked as partially saved. Successful model discovery records metadata without the model-list response body; failed discovery may include its error response. Exports include the saved response content, errors, app version and platform. Inspect exported logs before sharing them.</p>
+<p>The app retains up to 500 records from the last seven days, with a total serialized log-payload budget of 8 MiB and a per-record limit of 2 MiB. When new records are written, expired records and the oldest records beyond these limits are removed. Stale records are hidden from the diagnostics screen. These limits do not describe the physical database file size, and there is no background deletion timer. Turning off detailed logging stops saving detailed content for subsequent requests; it does not erase previously saved content. Upgrading does not automatically erase legacy response previews or error summaries. Older records remain until normal retention removes them or you clear diagnostics in the app. Clearing records does not remove previously exported files or guarantee removal of forensic remnants.</p>
 
 <h2>Backup, import and export</h2>
 <p>Backup JSON files are not encrypted by Compris. You choose which history, settings and provider configurations to export and where to save the file. Dedicated API keys are excluded by default; including selected keys requires an explicit choice and risk acknowledgement. Advanced request parameters are ordinary provider configuration and can contain other secrets you entered. Review the full export contents, even when the API-key option is off.</p>
@@ -99,7 +99,7 @@
 </section>
 <section id="privacy-zh" class="zh" lang="zh-Hans">
 <h1>Compris 隐私政策</h1>
-<p>更新日期：2026 年 9 月 21 日</p>
+<p>更新日期：2026 年 9 月 29 日</p>
 <h2>提供者与产品</h2>
 <p>Compris 由位于法国的 <strong>Green Bean Man</strong> 提供。联系邮箱：<strong>greenbean.ai.app@gmail.com</strong>。本政策适用于 Android 应用，并说明公开网站 <a href="https://kant-righteous.github.io/compris-site/privacy/">https://kant-righteous.github.io/compris-site/privacy/</a> 的独立数据处理。</p>
 <p>Compris 使用 AI 辅助词汇理解、阅读、表达与语言讲解。当前界面语言包括简体中文、英语、法语、西班牙语和意大利语；当前学习（目标）语言包括法语、西班牙语、意大利语、英语和简体中文。具体结果取决于模型与语言配置，可能存在错误。</p>
@@ -139,8 +139,8 @@
 <p>provider、网关及其上游模型服务有各自的条款和隐私政策。保留期限、训练用途、滥用监测、人工审核、分包商、处理国家与删除方式会因服务、地区、套餐和账号设置而异。网关可能将内容转交其他 provider。Green Bean Man 不决定这些独立行为，也不替它们承诺零保留、不训练、仅在欧盟处理或全面删除。请核查实际 endpoint 和账号适用的条款。修改显示名称或使用自定义 URL 不会改变服务条款。</p>
 
 <h2>诊断</h2>
-<p>诊断保存在本地，不会自动上传给 Green Bean Man。基本记录包含事件与结果、provider/模型标识、endpoint 主机名、错误代码和耗时。可选的详细性能日志增加请求/响应大小、token 数量、输出策略、校验代码和性能测量；诊断导出也可能包含应用版本和平台。响应正文永远不会被存储。默认的基本模式下，存储与导出还排除响应预览、provider 错误摘要及响应对象键名。如果启用可选的详细日志，经过脱敏和截断的响应预览、provider 错误摘要及响应对象键名会被额外记录（API key 及疑似密钥的字符串会被遮蔽）并出现在导出中。provider/模型名称和主机名仍可能识别你的服务配置，分享前请检查导出文件。</p>
-<p>应用最多保留 500 条诊断记录；超过七天的记录在写入新记录时删除，过期记录在诊断界面中隐藏；这不是后台定时删除。升级会移除当前诊断数据库记录中的旧响应预览和错误摘要字段，不能抹去此前导出的日志或取证残留。你可以在应用内清空诊断。</p>
+<p>诊断保存在本地，不会自动上传给 Green Bean Man。基本记录包含事件与结果、provider/模型标识、endpoint 主机名、错误代码和耗时，不保存请求内容或响应正文。可选的详细 AI 日志增加请求/响应大小、token 数量、输出策略、校验代码、性能测量、provider 错误摘要，以及包含响应对象键名的响应结构描述，并保存包括流式响应在内的服务商响应正文，每条响应最多 256 KiB。正文可能包含模型思考过程、回答、个人信息或服务商回显的输入。已配置的 API key 及疑似密钥字符串会被遮蔽，但这不会使其他内容匿名化。超过大小上限或提前中断的响应会标记为部分保存。成功的模型发现只记录元数据，不保存模型列表正文；失败时可能记录错误响应。导出文件包含已保存的响应内容、错误信息、应用版本及平台，分享前请检查完整内容。</p>
+<p>应用保留最近七天、最多 500 条诊断记录，序列化日志内容的总容量上限为 8 MiB，单条记录上限为 2 MiB。写入新记录时会移除过期记录，以及超过这些上限的最旧记录；过期记录在诊断界面中隐藏。这些上限不等于数据库文件的实际大小，也不代表后台定时删除。关闭详细日志后，后续请求不再保存详细内容，但已保存的内容不会被清除。升级不会自动清除旧响应预览或错误摘要；旧记录会保留到正常淘汰，或由你在应用内清空诊断。清空记录不会删除此前导出的文件，也不能保证抹去取证残留。</p>
 
 <h2>备份、导入与导出</h2>
 <p>Compris 不加密备份 JSON。你选择导出的历史、设置和 provider 配置，以及保存位置。专用 API key 默认不导出；导出选定密钥需要主动勾选并确认风险。高级请求参数属于普通 provider 配置，可能包含你输入的其他密钥。即使未勾选 API key，也应检查完整导出内容。</p>
